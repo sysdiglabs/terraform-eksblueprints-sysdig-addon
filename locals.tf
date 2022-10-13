@@ -16,8 +16,10 @@ locals {
   }
 
   default_helm_values = [
-    templatefile("${path.module}/sysdig_helm_values.yml", {})
-  ]
+    templatefile("${path.module}/sysdig_helm_values.yml", {
+
+    }
+  )]
 
   helm_config = merge(
     local.default_helm_config,

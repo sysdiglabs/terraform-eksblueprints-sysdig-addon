@@ -1,12 +1,12 @@
 global:
   sysdig:
-    accessKey: aaaaaaaa-c17e-499f-b130-bbbbbbbbbbbb 	# Change by the right token
+    accessKey: ${sysdig-accesskey}           # Sysdig Agent Access Key
     settings: 
-      collector: collector-static.sysdigcloud.com	# Change the region in case
+      collector: ${sysdig-collector-endpoint} # collector-static.sysdigcloud.com for sysdig us1
       collector_port: 6443
 nodeAnalyzer:
   nodeAnalyzer:
-    apiEndpoint: secure.sysdig.com			# Change the region in case
+    apiEndpoint: ${nodeanalyzer-api-endpoint} # secure.sysdig.com for sysdig us1
     secure:
       vulnerabilityManagement:
         newEngineOnly: true
