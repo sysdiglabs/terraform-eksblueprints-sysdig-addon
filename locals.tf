@@ -15,10 +15,12 @@ locals {
     wait             = false
   }
 
-  default_helm_values = [
-    templatefile("${path.module}/sysdig_helm_values.yml", {
-
-    }
+  default_helm_values = [templatefile("${path.module}/sysdig_helm_values.yml", 
+    {
+      sysdig-accesskey                  = ""
+      sysdig-collector-endpoint         = ""
+      sysdig-nodeanalyzer-api-endpoint  = ""
+    },
   )]
 
   helm_config = merge(

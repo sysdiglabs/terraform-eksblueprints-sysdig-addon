@@ -95,7 +95,23 @@ module "eks_blueprints_kubernetes_addons" {
 
   # Sysdig addon
   enable_sysdig_agent                 = true
-  sysdig_agent_helm_config            = {}
+
+  sysdig_agent_helm_config            = {
+    set_sensitive = [
+      {
+        name  = "sysdig-accesskey"
+        value = var.sysdig-accesskey
+      },
+      {
+        name  = "sysdig-collector-endpoint"
+        value = var.sysdig-collector-endpoint
+      },
+      {
+        name  = "sysdig-nodeanalyzer-api-endpoint"
+        value = var.sysdig-nodeanalyzer-api-endpoint
+      }      
+    ]
+  }
 
   enable_cert_manager = true
   cert_manager_helm_config = {

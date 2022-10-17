@@ -6,7 +6,7 @@ global:
       collector_port: 6443
 nodeAnalyzer:
   nodeAnalyzer:
-    apiEndpoint: ${nodeanalyzer-api-endpoint} # secure.sysdig.com for sysdig us1
+    apiEndpoint: ${sysdig-nodeanalyzer-api-endpoint} # secure.sysdig.com for sysdig us1
     secure:
       vulnerabilityManagement:
         newEngineOnly: true
