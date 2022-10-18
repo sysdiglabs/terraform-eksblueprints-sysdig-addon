@@ -15,6 +15,7 @@ variable "cluster_name" {
 variable "sysdig_accesskey" {
   type    = string
   default = ""
+  sensitive = true
 }
 
 variable "sysdig_collector_endpoint" {
