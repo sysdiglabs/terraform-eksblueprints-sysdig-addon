@@ -20,7 +20,7 @@ locals {
     var.helm_config
   )
 
-  default_helm_values = [templatefile("${path.module}/sysdig_helm_values.yml", {
+  default_helm_values = [templatefile("${path.module}/sysdig_helm_values.tftpl.yml", {
     sysdig_accesskey                  = ""
     sysdig_collector_endpoint         = ""
     sysdig_nodeanalyzer_api_endpoint  = ""
