@@ -95,6 +95,8 @@ module "eks_blueprints_kubernetes_addons" {
 
   # Sysdig addon
   enable_sysdig_agent                 = true
+  
+  sysdig_accesskey = var.sysdig_accesskey
 
   sysdig_agent_helm_config            = {
     set_sensitive = [

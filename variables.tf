@@ -10,6 +10,11 @@ variable "manage_via_gitops" {
   default     = false
 }
 
+variable "sysdig_accesskey" {
+  type        = string
+  sensitive   = true
+}
+
 variable "addon_context" {
   description = "Input configuration for the addon"
   type = object({
