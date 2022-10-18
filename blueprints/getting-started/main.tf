@@ -99,16 +99,16 @@ module "eks_blueprints_kubernetes_addons" {
   sysdig_agent_helm_config            = {
     set_sensitive = [
       {
-        name  = "sysdig-accesskey"
-        value = var.sysdig-accesskey
+        name  = "sysdig_accesskey"
+        value = var.sysdig_accesskey
       },
       {
-        name  = "sysdig-collector-endpoint"
-        value = var.sysdig-collector-endpoint
+        name  = "sysdig_collector_endpoint"
+        value = var.sysdig_collector_endpoint
       },
       {
-        name  = "sysdig-nodeanalyzer-api-endpoint"
-        value = var.sysdig-nodeanalyzer-api-endpoint
+        name  = "sysdig_nodeanalyzer_api_endpoint"
+        value = var.sysdig_nodeanalyzer_api_endpoint
       }      
     ]
   }
