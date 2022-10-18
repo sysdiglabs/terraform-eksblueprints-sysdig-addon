@@ -15,17 +15,14 @@ variable "cluster_name" {
 variable "sysdig_accesskey" {
   type    = string
   default = ""
-  sensitive = true
 }
 
 variable "sysdig_collector_endpoint" {
   type    = string
   default = "collector-static.sysdigcloud.com"
-  sensitive = true
 }
 
 variable "sysdig_nodeanalyzer_api_endpoint" {
   type    = string
   default = "secure.sysdig.com"
-  sensitive = true
 }
