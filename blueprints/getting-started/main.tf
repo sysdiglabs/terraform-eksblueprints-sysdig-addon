@@ -126,20 +126,11 @@ module "eks_blueprints_kubernetes_addons" {
   enable_sysdig_agent                   = true
 
   sysdig_agent_helm_config = {
-      set_sensitive = [
-      {
-        name  = "sysdigAccessKey"
-        value = var.sysdig_accesskey
-      },
-      {
-        name  = "sysdigCollectorEndpoint"
-        value = var.sysdig_collector_endpoint
-      },
-      {
-        name  = "sysdigNodeAnalyzer"
-        value = var.sysdig_nodeanalyzer_api_endpoint
-      }
-    ]
+    values = [templatefile("${path.module}/values.yaml", {
+      sysdigAccessKey = var.sysdig_accesskey
+      sysdigCollectorEndpoint = var.sysdig_collector_endpoint
+      sysdigNodeAnalyzer = var.sysdig_nodeanalyzer_api_endpoint
+    })]
   }
 
   tags = local.tags

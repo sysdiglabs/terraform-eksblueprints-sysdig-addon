@@ -28,11 +28,6 @@ locals {
     var.helm_config
   )
 
-  default_helm_values = [templatefile("${path.module}/values.yaml", {
-    sysdigAccessKey                   = ""
-    sysdigCollectorEndpoint           = ""
-    sysdigNodeAnalyzer                = ""
-    },
-  )]
+  default_helm_values = [templatefile("${path.module}/values.yaml", {},)]
 
 }
