@@ -27,7 +27,4 @@ locals {
     var.helm_config
   )
 
-  argocd_gitops_config = {
-    enable = true
-  }
 }
