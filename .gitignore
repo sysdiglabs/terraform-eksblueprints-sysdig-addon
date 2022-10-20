@@ -30,3 +30,6 @@ override.tf.json
 
 # Mac files
 .DS_Store
+
+# Avoid to repositorize effective values
+terraform.tfvars
