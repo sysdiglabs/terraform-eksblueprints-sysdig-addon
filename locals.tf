@@ -7,6 +7,9 @@ resource "random_string" "id" {
 locals {
   name = "sysdig-agent"
 
+  set_values = [{}]
+
+
   default_helm_config = {
     name             = "sysdig-agent"
     namespace        = "sysdig-agent"

@@ -21,9 +21,11 @@ variable "sysdig_accesskey" {
 variable "sysdig_collector_endpoint" {
   type    = string
   default = "collector-static.sysdigcloud.com"
+  sensitive = true
 }
 
 variable "sysdig_nodeanalyzer_api_endpoint" {
   type    = string
   default = "secure.sysdig.com"
+  sensitive = true
 }
