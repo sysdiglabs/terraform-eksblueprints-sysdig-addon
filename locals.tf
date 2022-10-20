@@ -27,9 +27,9 @@ locals {
   )
 
   default_helm_values = [templatefile("${path.module}/values.yaml", {
-    sysdig_accesskey                  = ""
-    sysdig_collector_endpoint         = ""
-    sysdig_nodeanalyzer_api_endpoint  = ""
+    sysdigAccessKey                   = ""
+    sysdigCollectorEndpoint           = ""
+    sysdigNodeAnalyzer                = ""
     },
   )]
 
