@@ -1,3 +1,9 @@
+resource "random_string" "id" {
+  length  = 4
+  special = false
+  upper   = false
+}
+
 locals {
   name = "sysdig-agent"
 
@@ -15,16 +21,16 @@ locals {
     wait             = false
   }
 
-  default_helm_values = [templatefile("${path.module}/sysdig_helm_values.tftpl.yml", {
+  helm_config = merge(
+    local.default_helm_config,
+    var.helm_config
+  )
+
+  default_helm_values = [templatefile("${path.module}/values.yaml", {
     sysdig_accesskey                  = ""
     sysdig_collector_endpoint         = ""
     sysdig_nodeanalyzer_api_endpoint  = ""
     },
   )]
-
-  helm_config = merge(
-    local.default_helm_config,
-    var.helm_config
-  )
 
 }
