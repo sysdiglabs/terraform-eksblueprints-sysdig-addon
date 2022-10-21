@@ -1,6 +1,6 @@
-global:
+agent:
   sysdig:
-    settings: 
+    settings:
       collector_port: 6443
 nodeAnalyzer:
   nodeAnalyzer:

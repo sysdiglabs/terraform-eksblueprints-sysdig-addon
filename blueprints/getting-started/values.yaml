@@ -1,7 +1,9 @@
 global:
   sysdig:
     accessKey: ${sysdigAccessKey}                  # Sysdig Agent Access Key
-    settings: 
+agent:
+  sysdig:
+    settings:
       collector: ${sysdigCollectorEndpoint}       # collector-static.sysdigcloud.com for sysdig us1
       collector_port: 6443
 nodeAnalyzer:
