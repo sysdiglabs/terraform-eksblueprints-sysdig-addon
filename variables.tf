@@ -7,7 +7,7 @@ variable "helm_config" {
 variable "cluster_name" {
   type        = string
   description = "Cluster Name"
-  default     = "GettingStarted"
+  default     = ""
 }
 
 variable "addon_context" {
