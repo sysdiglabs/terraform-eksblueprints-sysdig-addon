@@ -6,6 +6,7 @@ on:
       - '**.tf'
       - '**.md'
       - '.pre-commit-config.yaml'
+  workflow_dispatch:
   # only direct-push to master for small tasks such as markdown modifications and such
   push:
     branches:
