@@ -5,8 +5,8 @@ resource "random_string" "id" {
 }
 
 locals {
-  name        = "sysdig"
-  namespace   = "sysdig"
+  name      = "sysdig"
+  namespace = "sysdig"
 
   set_values = []
 
@@ -28,6 +28,6 @@ locals {
     var.helm_config
   )
 
-  default_helm_values = [templatefile("${path.module}/values.yaml", {},)]
+  default_helm_values = [templatefile("${path.module}/values.yaml", {}, )]
 
 }

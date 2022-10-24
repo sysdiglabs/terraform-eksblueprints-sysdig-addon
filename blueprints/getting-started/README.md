@@ -2,13 +2,13 @@
 
 ## Prerequisites
 
-Initialize TF VARS with the proper credentials and urls from your Sysdig SaaS account and region.  
-https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges   
+Initialize TF VARS with the proper credentials and urls from your Sysdig SaaS account and region.
+https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges
 
 ```
-export TF_VAR_sysdig_accesskey=<sysdig-agent-accesskey>  
-export TF_VAR_sysdig_collector_endpoint=<sysdig_collector_endpoint>  
-export TF_VAR_nodeanalyzer-api-endpoint=<sysdig_nodeanalyzer_api_endpoint>  
+export TF_VAR_sysdig_accesskey=<sysdig-agent-accesskey>
+export TF_VAR_sysdig_collector_endpoint=<sysdig_collector_endpoint>
+export TF_VAR_nodeanalyzer-api-endpoint=<sysdig_nodeanalyzer_api_endpoint>
 ```
 
 Example with an account from Sysdig us-west (us2)

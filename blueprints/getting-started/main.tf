@@ -9,7 +9,7 @@ resource "random_string" "random_suffix" {
 }
 
 locals {
-  name = basename(path.cwd)
+  name         = basename(path.cwd)
   cluster_name = "${local.name}-${random_string.random_suffix.result}"
   region       = var.aws_region
 
@@ -99,7 +99,7 @@ module "eks_blueprints" {
     mg_5 = {
       node_group_name = "managed-ondemand"
 
-      instance_types  = ["m5.large"]
+      instance_types = ["m5.large"]
       capacity_type  = "ON_DEMAND"
       disk_size      = 50
 
@@ -108,7 +108,7 @@ module "eks_blueprints" {
       min_size        = 2
       max_unavailable = 1
 
-      subnet_ids      = module.vpc.private_subnets
+      subnet_ids = module.vpc.private_subnets
     }
   }
 
@@ -147,17 +147,17 @@ module "eks_blueprints_kubernetes_addons" {
   # enable_aws_load_balancer_controller = true
 
   # Sysdig addon
-  enable_sysdig_agent                   = true
+  enable_sysdig_agent = true
 
   sysdig_agent_helm_config = {
 
-    namespace  = "sysdig-agent"
+    namespace = "sysdig-agent"
 
     values = [templatefile("${path.module}/values.yaml", {
-      sysdigAccessKey = sensitive(var.sysdig_accesskey)
+      sysdigAccessKey         = sensitive(var.sysdig_accesskey)
       sysdigCollectorEndpoint = var.sysdig_collector_endpoint
-      sysdigNodeAnalyzer = var.sysdig_nodeanalyzer_api_endpoint
-      sysdigClusterName = local.cluster_name
+      sysdigNodeAnalyzer      = var.sysdig_nodeanalyzer_api_endpoint
+      sysdigClusterName       = local.cluster_name
     })]
   }
 

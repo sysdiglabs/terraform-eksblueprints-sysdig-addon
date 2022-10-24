@@ -7,8 +7,8 @@ variable "aws_region" {
 
 # Sysdig Access Key
 variable "sysdig_accesskey" {
-  type    = string
-  default = ""
+  type      = string
+  default   = ""
   sensitive = true
 }
 
