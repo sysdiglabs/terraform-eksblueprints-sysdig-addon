@@ -1,6 +1,8 @@
 global:
   sysdig:
     accessKey: ${sysdigAccessKey}                  # Sysdig Agent Access Key
+  clusterConfig:
+    name: ${sysdigClusterName}
 agent:
   sysdig:
     settings:

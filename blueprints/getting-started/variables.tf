@@ -5,13 +5,6 @@ variable "aws_region" {
   default     = "sa-east-1"
 }
 
-# AWS Cluster name
-variable "cluster_name" {
-  description = "Name of cluster"
-  type        = string
-  default     = ""
-}
-
 # Sysdig Access Key
 variable "sysdig_accesskey" {
   type    = string
@@ -23,12 +16,10 @@ variable "sysdig_accesskey" {
 variable "sysdig_collector_endpoint" {
   type    = string
   default = "collector-static.sysdigcloud.com"
-  sensitive = true
 }
 
 # Sysdig NodeAnalyzer endpoint url
 variable "sysdig_nodeanalyzer_api_endpoint" {
   type    = string
   default = "secure.sysdig.com"
-  sensitive = true
 }

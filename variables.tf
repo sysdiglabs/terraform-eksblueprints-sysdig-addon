@@ -4,6 +4,12 @@ variable "helm_config" {
   default     = {}
 }
 
+variable "cluster_name" {
+  type        = string
+  description = "Cluster Name"
+  default     = "GettingStarted"
+}
+
 variable "addon_context" {
   description = "Input configuration for the addon"
   type = object({
