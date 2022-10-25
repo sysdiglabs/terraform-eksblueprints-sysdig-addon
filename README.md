@@ -9,11 +9,12 @@ This project contains the [Sysdig](https://sysdig.com) add-on for [AWS EKS Bluep
 
 ## EKS add-ons and blueprints
 
-With [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day 0 as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/) as well as a set of optional components/automations.
+With [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/) as well as a set of optional components/automations.
 
 This add-on and blueprints extends [EKS Blueprints](https://github.com/aws-samples/aws-eks-accelerator-for-terraform).
 
-<!--- BEGIN_TF_DOCS --->
+## Blueprint Examples
+
 ## Requirements
 
 | Name |
@@ -21,24 +22,28 @@ This add-on and blueprints extends [EKS Blueprints](https://github.com/aws-sampl
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) >= 1.0.0 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) |
 
-## Providers
+## Terraform Documentation
+
+<!--- BEGIN_TF_DOCS --->
+
+### Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.72 |
 | <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.10 |
 
-## Modules
+### Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_helm_addon"></a> [helm\_addon](#module\_helm\_addon) | github.com/aws-samples/aws-eks-accelerator-for-terraform//modules/kubernetes-addons/helm-addon | n/a |
 
-## Resources
+### Resources
 
 No resources.
 
-## Inputs
+### Inputs
 
 TODO (Pending)
 <!--- END_TF_DOCS --->
