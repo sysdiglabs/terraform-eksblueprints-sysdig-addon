@@ -2,7 +2,14 @@
 variable "aws_region" {
   description = "AWS target region"
   type        = string
-  default     = "sa-east-1"
+  default     = "us-east-1"
+}
+
+# EKS cluster name
+variable "cluster_name" {
+  description = "Cluster name"
+  type        = string
+  default     = ""
 }
 
 # Sysdig Access Key

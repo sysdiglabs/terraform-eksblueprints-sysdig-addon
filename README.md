@@ -42,9 +42,9 @@ Check out the [blueprints](/blueprints/) to undesrtand how to use and extend the
 
 ### Resources
 
-| Name | Version |
+| Name | Type |
 |------|---------|
-| <a name="resource_random_string.id"></a> [random\_string](#resource\_helm\_addon) | n/a |
+| <a name="resource_random_string.id"></a> [random\_string](#resource\_random\_string) | resource |
 
 
 ### Inputs
