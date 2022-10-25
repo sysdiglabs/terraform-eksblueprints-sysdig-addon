@@ -42,9 +42,20 @@ Check out the [blueprints](/blueprints/) to undesrtand how to use and extend the
 
 ### Resources
 
-No resources.
+| Name | Version |
+|------|---------|
+| <a name="resource_random_string.id"></a> [helm\_addon](#resource\_helm\_addon) | n/a |
+
 
 ### Inputs
 
-TODO (Pending)
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_addon_context"></a> [addon\_context](#input\_addon\_context) | Input configuration for the addon | `any` | n/a | yes |
+| <a name="input_helm_config"></a> [helm\_config](#input\_helm\_config) | Helm chart configuration | `any` | `{}` | no |
+
+### Outputs
+
+No output
+
 <!--- END_TF_DOCS --->
