@@ -5,7 +5,7 @@
 ## Introduction
 [Sysdig](https://sysdig.com) is a security and monitoring platform that helps organizations to confidently manage cloud and containers from source to run. One of the particularities of [Sysdig](https://sysdig.com) is the ability to seamlessly provide context from Kubernetes clusters as it is built on top of [Falco](https://falco.org/), the de-facto standard for runtime security donated to the CNCF.
 
-This project contains the [Sysdig](https://sysdig.com) add-on for [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints).
+This project contains the [Sysdig](https://sysdig.com) add-on for [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints) as well as the [base blueprint(s)](/blueprints/).
 
 ## EKS add-ons and blueprints
 
