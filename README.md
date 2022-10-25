@@ -9,13 +9,15 @@ This project contains the [Sysdig](https://sysdig.com) add-on for [AWS EKS Bluep
 
 ## EKS add-ons and blueprints
 
-With [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day-zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/) as well as a set of optional components. 
+With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day-zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/) as well as a set of optional components. 
 
-This add-on and blueprints extends [EKS Blueprints](https://github.com/aws-samples/aws-eks-accelerator-for-terraform).
+This add-on and the blueprints extends the framework [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints).
 
 ## Addon usage examples
 
-Check out the [blueprints](/blueprints/) to undesrtand how to use and extend the Sysdig add-on and keep your AWS EKS cluster secured and monitored.
+Check out the [blueprints](/blueprints/) to undesrtand how to use and extend the Sysdig add-on to provision your AWS EKS clusters and keep them secured and monitored with not a single blind spot.
+ 
+The [Getting Started blueprint](/blueprints/getting-started/) illustrates the basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.
 
 ## Requirements
 
