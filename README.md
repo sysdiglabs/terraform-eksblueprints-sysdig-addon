@@ -3,30 +3,30 @@
 **`This project is currently in BETA stage`**
 
 ## Introduction
-[Sysdig](https://sysdig.com) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-including versions of Lorem Ipsum.
+[Sysdig](https://sysdig.com) is a security and monitoring platform that helps organizations to confidently manage cloud and containers from source to run. One of the particularities of [Sysdig](https://sysdig.com) is the ability to seamlessly provide context from Kubernetes clusters as it is built on top of [Falco](https://falco.org/), the de-facto standard for runtime security donated to the CNCF.
+
+This project contains the [Sysdig](https://sysdig.com) add-on for [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints).
 
 ## EKS add-ons and blueprints
+
+With [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day 0 as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/) as well as a set of optional components/automations.
 
 This add-on and blueprints extends [EKS Blueprints](https://github.com/aws-samples/aws-eks-accelerator-for-terraform).
 
 <!--- BEGIN_TF_DOCS --->
 ## Requirements
 
-## Requirements
-
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | >= 2.10 |
+| Name |
+|------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) >= 1.0.0 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.72 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.10 |
 
 ## Modules
 
@@ -41,10 +41,4 @@ No resources.
 ## Inputs
 
 TODO (Pending)
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| <a name="output_argocd_gitops_config"></a> [argocd\_gitops\_config](#output\_argocd\_gitops\_config) | Configuration used for managing the add-on with ArgoCD |
 <!--- END_TF_DOCS --->
