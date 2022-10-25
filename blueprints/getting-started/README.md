@@ -61,7 +61,7 @@ You can optionally indicate a cluster name and AWS region.
     terraform plan
     terraform apply
     ```
-4. Once the Terraform script finishes process, we can configure our local kubeconfig with the following aws-cli command. (<aws-region> and <cluster-name> has to be copied from the previous output or use $TF_VAR_cluster_name and $TF_VAR_aws_region if they was declared before)
+4. Once the Terraform the process gets finished we can configure our local kubeconfig with the following aws-cli command. (<aws-region> and <cluster-name> has to be copied from the previous output or use $TF_VAR_cluster_name and $TF_VAR_aws_region if they was declared before)
     ```
     aws eks --region <aws-region> update-kubeconfig --name <cluster-name>
     ```
@@ -69,3 +69,4 @@ You can optionally indicate a cluster name and AWS region.
     ```
     kubectl get nodes --all-namespaces
     ```
+6. Go to the Sysdig UI : Integrations > Data Sources. The new cluster as well as its nodes should appear in the list.
