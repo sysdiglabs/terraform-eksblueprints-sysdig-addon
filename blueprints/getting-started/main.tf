@@ -9,8 +9,8 @@ resource "random_string" "random_suffix" {
 }
 
 locals {
-  name         = coalesce(var.cluster_name, basename(path.cwd))
-  cluster_name = "${local.name}-${random_string.random_suffix.result}"
+  name = coalesce(var.cluster_name, "${basename(path.cwd)}-${random_string.random_suffix.result}")
+  cluster_name = local.name
   region       = var.aws_region
 
   vpc_cidr = "10.0.0.0/16"
