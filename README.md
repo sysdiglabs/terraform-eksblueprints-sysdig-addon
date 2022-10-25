@@ -9,18 +9,19 @@ This project contains the [Sysdig](https://sysdig.com) add-on for [AWS EKS Bluep
 
 ## EKS add-ons and blueprints
 
-With [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/) as well as a set of optional components/automations.
+With [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day-zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/) as well as a set of optional components. 
 
 This add-on and blueprints extends [EKS Blueprints](https://github.com/aws-samples/aws-eks-accelerator-for-terraform).
 
-## Blueprint Examples
+## Addon usage examples
+
+Check out the [blueprints](/blueprints/) to undesrtand how to use and extend the Sysdig add-on and keep your AWS EKS cluster secured and monitored.
 
 ## Requirements
 
-| Name |
-|------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) >= 1.0.0 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) |
+* Terraform >= 1.0.0 (Recommended > 1.3.0)
+* AWS cli configured and connected using enough credentials.
+* A Sysdig account. You can register your (Sysdig Free Trial)[https://sysdig.com/company/start-free/] and start experimenting on how to secure an EKS cluster now.
 
 ## Terraform Documentation
 
