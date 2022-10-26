@@ -61,3 +61,9 @@ The [Getting Started blueprint](/blueprints/getting-started/) illustrates the ba
 No output
 
 <!--- END_TF_DOCS --->
+
+## Training
+
+* EKS Blueprints for Terraform official workshop: https://catalog.workshops.aws/eks-blueprints-terraform/en-US
+
+* Sysdig AWS workshops: https://sysdig.awsworkshop.io
