@@ -18,7 +18,7 @@ This blueprint will generate the following components:
 * [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 * [AWS-Cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * [Kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
-* A [Sysdig account](https://sysdig.com/company/start-free/). You can register your [Sysdig Trial]https://sysdig.com/company/start-free/] for a free evaluation period.
+* A [Sysdig account](https://sysdig.com/company/start-free/). You can register your [Sysdig Trial](https://sysdig.com/company/start-free/) for a free evaluation period.
 
 ## Usage
 
