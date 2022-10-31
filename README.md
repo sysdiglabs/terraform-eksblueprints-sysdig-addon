@@ -18,7 +18,7 @@ The [Getting Started Blueprint](/blueprints/getting-started/) illustrates the ba
 ## Requirements
 
 * Terraform >= 1.0.0 (Recommended > 1.3.0)
-* AWS cli configured and connected using enough credentials.
+* AWS Command Line and credentials
 * A Sysdig account. You can register your [Sysdig Free Trial](https://sysdig.com/company/start-free/) and start experimenting on how to secure an EKS cluster now.
 
 ## Terraform Documentation
