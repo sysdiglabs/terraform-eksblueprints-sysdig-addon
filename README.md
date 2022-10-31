@@ -13,7 +13,7 @@ With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraf
 
 ## Getting started 
  
-The [Getting Started blueprint](/blueprints/getting-started/) illustrates the basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.
+The [Getting Started Blueprint](/blueprints/getting-started/) illustrates the basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.
 
 ## Requirements
 
