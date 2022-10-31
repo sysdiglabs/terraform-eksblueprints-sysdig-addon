@@ -3,7 +3,7 @@
 ## Introduction
 
 [Sysdig](https://sysdig.com) is a security and monitor platform built for you to confidently run cloud and containers. 
-This Getting Started Blueprint allows to deploy AWS EKS clusters with the [Sysdig EKS Terraform Addon](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest) incorporated, configured and running. You will be able to customize and extend the blueprint following a gitops approach to adapt it to your needs regarding to [security](https://sysdig.com/products/secure/), [monitoring](https://sysdig.com/products/monitor/) or both secure and monitor with [Sysdig Platform Architecture](https://sysdig.com/platform-architecture/).
+This Getting Started Blueprint allows to deploy AWS EKS clusters with the [Sysdig EKS Terraform Addon](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest) incorporated and configured from the day zero. You will be able to customize and extend the blueprint following a gitops approach to adapt it to your needs regarding to [security](https://sysdig.com/products/secure/), [monitoring](https://sysdig.com/products/monitor/) or both secure and monitor with [Sysdig Platform Architecture](https://sysdig.com/platform-architecture/).
 
 This blueprint will generate the following components: 
 
