@@ -1,8 +1,6 @@
 # Sysdidg Addon for EKS Blueprints
 
----
 **_`This project is currently in BETA stage`_**
----
 
 ## Introduction
 [Sysdig](https://sysdig.com) is a security and monitoring platform that helps organizations to confidently drive cloud and containers by providing insight from source to run. [Sysdig](https://sysdig.com) is built on open standards like [Falco](https://falco.org/), [OPA](https://www.openpolicyagent.org/) and [Prometheus](https://prometheus.io/).
