@@ -37,7 +37,7 @@ You can optionally indicate a cluster name and AWS region.
     ```
     export TF_VAR_sysdig_accesskey=<sysdig-agent-accesskey>
     export TF_VAR_sysdig_collector_endpoint=<sysdig_collector_endpoint>
-    export TF_VAR_nodeanalyzer-api-endpoint=<sysdig_nodeanalyzer_api_endpoint>
+    export TF_VAR_nodeanalyzer_api_endpoint=<sysdig_nodeanalyzer_api_endpoint>
     export TF_VAR_cluster_name=<cluster_name>   # Optional
     export TF_VAR_aws_region=<aws-region>       # Optional
     ```
@@ -46,7 +46,7 @@ You can optionally indicate a cluster name and AWS region.
     ```
     export TF_VAR_sysdig_accesskey=fa3efa3e-95ee-4233-b222-fa3efa3e8120a
     export TF_VAR_sysdig_collector_endpoint=ingest-us2.app.sysdig.com
-    export TF_VAR_nodeanalyzer-api-endpoint=us2.app.sysdig.com
+    export TF_VAR_nodeanalyzer_api_endpoint=us2.app.sysdig.com
     export TF_VAR_cluster_name="my-aws-cluster-sysdig"
     export TF_VAR_aws_region="sa-east-1"
     ```
