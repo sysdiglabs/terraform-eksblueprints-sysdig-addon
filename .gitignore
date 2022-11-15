@@ -12,7 +12,14 @@ crash.log
 # .tfvars files are managed as part of configuration and so should be included in
 # version control.
 #
-# example.tfvars
+.tfvars
+
+# Terraform files that should be generated locally
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl
+**/.terraform/*
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in
@@ -30,6 +37,3 @@ override.tf.json
 
 # Mac files
 .DS_Store
-
-# Avoid to repositorize effective values
-terraform.tfvars
