@@ -13,6 +13,7 @@ crash.log
 # version control.
 #
 *.tfvars
+*.tfvars.json
 
 # Terraform files that should be generated locally
 *.tfstate
