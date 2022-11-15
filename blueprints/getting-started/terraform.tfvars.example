@@ -1,0 +1,6 @@
+sysdig_accesskey=<access-key> 					# Sysdig > Integrations > Agent Installation
+sysdig_collector_endpoint=<sysdig-collector-endpoint>		# Check your corresponding endpoint from https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges
+nodeanalyzer_api_endpoint=<sysdig-nodeanalyzer-endpoint>	# Check your corresponding endpoint from https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges
+
+cluster_name="aws-cluster-sysdig"				# Set the name of the EKS cluster
+aws_region="us-east-1"						# Define the AWS region where the cluster will be provisioned
