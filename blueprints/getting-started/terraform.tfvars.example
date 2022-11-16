@@ -1,3 +1,5 @@
+#  terraform apply -var-file="terraform.tfvars"
+
 sysdig_accesskey=<access-key> 					# Sysdig > Integrations > Agent Installation
 sysdig_collector_endpoint=<sysdig-collector-endpoint>		# Check your corresponding endpoint from https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges
 nodeanalyzer_api_endpoint=<sysdig-nodeanalyzer-endpoint>	# Check your corresponding endpoint from https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges

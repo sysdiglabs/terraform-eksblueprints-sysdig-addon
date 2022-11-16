@@ -38,3 +38,6 @@ override.tf.json
 
 # Mac files
 .DS_Store
+
+# Local backups
+*.backup
