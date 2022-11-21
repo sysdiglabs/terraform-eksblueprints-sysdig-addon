@@ -34,8 +34,8 @@ This blueprint will generate the following components:
 https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges   
 You can choose between to ways to pass the parameters:
 
-**a. Initialize values using terraform.tfvars**  
-Rename the *terraform.tfvars.backup* file to *terraform.tfvars* and populate the values.
+    **a. Initialize values using terraform.tfvars**  
+    Rename the *terraform.tfvars.backup* file to *terraform.tfvars* and populate the values.
     ```
     sysdig_accesskey="fa3efa3e-1234-1234-1234-fa3efa3e8120a"
     sysdig_collector_endpoint="ingest-us2.app.sysdig.com"
@@ -45,7 +45,7 @@ Rename the *terraform.tfvars.backup* file to *terraform.tfvars* and populate the
     aws_region="eu-north-1"
     ```
     **b. Initialize using system variables (TF_VARS)**  
-(You can optionally indicate a cluster name and AWS region).
+    (You can optionally indicate a cluster name and AWS region).
     ```
     export TF_VAR_sysdig_accesskey=<sysdig-agent-accesskey>
     export TF_VAR_sysdig_collector_endpoint=<sysdig_collector_endpoint>
