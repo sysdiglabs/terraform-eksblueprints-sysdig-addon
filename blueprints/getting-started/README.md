@@ -32,10 +32,9 @@ This blueprint will generate the following components:
 
 2. Initialize by providing the proper credentials and urls from your Sysdig SaaS account and region.
 https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges   
-You can choose to pass the parameters via .tfvars file or system variables.
+You can choose to pass the parameters via .tfvars file or system variables.  
 **a. Initialize values using terraform.tfvars**
-   Just rename the terraform.tfvars.backup file to terraform.tfvars and populate the values.
-
+Just rename the terraform.tfvars.backup file to terraform.tfvars and populate the values.
     ```
     sysdig_accesskey="fa3efa3e-1234-1234-1234-fa3efa3e8120a"
     sysdig_collector_endpoint="ingest-us2.app.sysdig.com"
@@ -46,7 +45,7 @@ You can choose to pass the parameters via .tfvars file or system variables.
 
     ```
 **b. Initialize using system variables (TF_VARS)**
-  (You can optionally indicate a cluster name and AWS region).
+(You can optionally indicate a cluster name and AWS region).
 
     ```
     export TF_VAR_sysdig_accesskey=<sysdig-agent-accesskey>
