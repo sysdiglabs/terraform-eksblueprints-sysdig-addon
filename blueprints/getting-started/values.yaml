@@ -11,6 +11,6 @@ agent:
 nodeAnalyzer:
   nodeAnalyzer:
     apiEndpoint: ${sysdigNodeAnalyzer} # secure.sysdig.com for sysdig us1
-    secure:
-      vulnerabilityManagement:
-        newEngineOnly: true
+  secure:
+    vulnerabilityManagement:
+      newEngineOnly: true
