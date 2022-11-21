@@ -26,7 +26,7 @@ variable "sysdig_collector_endpoint" {
 }
 
 # Sysdig NodeAnalyzer endpoint url
-variable "sysdig_nodeanalyzer_api_endpoint" {
+variable "nodeanalyzer_api_endpoint" {
   type    = string
   default = "secure.sysdig.com"
 }
