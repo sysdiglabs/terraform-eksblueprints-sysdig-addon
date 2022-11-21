@@ -30,23 +30,34 @@ This blueprint will generate the following components:
     cd blueprints/getting-started
     ````
 
-2. Initialize TF VARS with the proper credentials and urls from your Sysdig SaaS account and region.
+2. Initialize by providing the proper credentials and urls from your Sysdig SaaS account and region.
 https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges   
-You can optionally indicate a cluster name and AWS region.
+You can choose between to ways to pass the parameters:
 
+    **a. Initialize values using terraform.tfvars**  
+    Rename the *terraform.tfvars.backup* file to *terraform.tfvars* and populate the values.
+    ```
+    sysdig_accesskey="fa3efa3e-1234-1234-1234-fa3efa3e8120a"
+    sysdig_collector_endpoint="ingest-us2.app.sysdig.com"
+    sysdig_nodeanalyzer_api_endpoint="us2.app.sysdig.com"
+
+    cluster_name="StagingClusterB"
+    aws_region="eu-north-1"
+    ```
+    **b. Initialize using system variables (TF_VARS)**  
+    (You can optionally indicate a cluster name and AWS region).
     ```
     export TF_VAR_sysdig_accesskey=<sysdig-agent-accesskey>
     export TF_VAR_sysdig_collector_endpoint=<sysdig_collector_endpoint>
-    export TF_VAR_nodeanalyzer_api_endpoint=<sysdig_nodeanalyzer_api_endpoint>
-    export TF_VAR_cluster_name=<cluster_name>   # Optional
-    export TF_VAR_aws_region=<aws-region>       # Optional
+    export TF_VAR_sysdig_nodeanalyzer_api_endpoint=<sysdig_nodeanalyzer_api_endpoint>
+    export TF_VAR_cluster_name=<cluster_name>     # Optional
+    export TF_VAR_aws_region=<aws-region>         # Optional
     ```
 
-    Example using a Sysdig account from us-west (us2) monitoring an EKS cluster located in the AWS region of Sao Paolo (sa-east-1)
     ```
-    export TF_VAR_sysdig_accesskey=fa3efa3e-95ee-4233-b222-fa3efa3e8120a
+    export TF_VAR_sysdig_accesskey=fa3efa3e-1234-1234-1234-fa3efa3e8120a
     export TF_VAR_sysdig_collector_endpoint=ingest-us2.app.sysdig.com
-    export TF_VAR_nodeanalyzer_api_endpoint=us2.app.sysdig.com
+    export TF_VAR_sysdig_nodeanalyzer_api_endpoint=us2.app.sysdig.com
     export TF_VAR_cluster_name="my-aws-cluster-sysdig"
     export TF_VAR_aws_region="sa-east-1"
     ```
@@ -57,7 +68,7 @@ You can optionally indicate a cluster name and AWS region.
     terraform plan
     terraform apply
     ```
-4. Once the Terraform the process gets finished we can configure our local kubeconfig with the following aws-cli command. (\\<aws-region\\> and \\<cluster-name\\> has to be copied from the previous output or use $TF_VAR_cluster_name and $TF_VAR_aws_region if they was declared before)
+4. Once the Terraform the process gets finished we can configure our local kubeconfig with the following aws-cli command. ( *\<aws-region\> and \<cluster-name\> has to be copied from the previous output or reuse the cluster_name and aws_region parameters if they were declared before* )
     ```
     aws eks --region <aws-region> update-kubeconfig --name <cluster-name>
     ```
