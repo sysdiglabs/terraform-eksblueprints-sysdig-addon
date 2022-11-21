@@ -21,7 +21,7 @@ variable "sysdig_accesskey" {
 
 # us1|us2|us3|us4|eu1|au1|custom
 # https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/
-variable "sysdigRegion" {
+variable "sysdig_region" {
   type    = string
   default = "us2"
 }
