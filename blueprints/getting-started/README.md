@@ -68,7 +68,7 @@ You can choose between to ways to pass the parameters:
     terraform plan
     terraform apply
     ```
-4. Once the Terraform the process gets finished we can configure our local kubeconfig with the following aws-cli command. (\\<aws-region\\> and \\<cluster-name\\> has to be copied from the previous output or use $TF_VAR_cluster_name and $TF_VAR_aws_region if they was declared before)
+4. Once the Terraform the process gets finished we can configure our local kubeconfig with the following aws-cli command. ( *\<aws-region\> and \<cluster-name\> has to be copied from the previous output or reuse the cluster_name and aws_region parameters if they were declared before* )
     ```
     aws eks --region <aws-region> update-kubeconfig --name <cluster-name>
     ```
