@@ -152,8 +152,7 @@ module "eks_blueprints_kubernetes_addons" {
 
     values = [templatefile("${path.module}/values.yaml", {
       sysdigAccessKey         = sensitive(var.sysdig_accesskey)
-      sysdigCollectorEndpoint = var.sysdig_collector_endpoint
-      sysdigNodeAnalyzer      = var.sysdig_nodeanalyzer_api_endpoint
+      sysdigRegion            = var.sysdig_region
       sysdigClusterName       = local.cluster_name
     })]
   }

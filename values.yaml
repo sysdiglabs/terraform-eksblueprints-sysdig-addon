@@ -1,9 +1,14 @@
+global:
+  kspm:
+    deploy: true
 agent:
   sysdig:
     settings:
       collector_port: 6443
 nodeAnalyzer:
   nodeAnalyzer:
-    secure:
-      vulnerabilityManagement:
-        newEngineOnly: true
+    benchmarkRunner:
+      deploy: false
+  secure:
+    vulnerabilityManagement:
+      newEngineOnly: true

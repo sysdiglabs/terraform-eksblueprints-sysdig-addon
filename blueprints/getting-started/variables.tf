@@ -19,14 +19,9 @@ variable "sysdig_accesskey" {
   sensitive = true
 }
 
-# Sysdig Collector endpoint url
-variable "sysdig_collector_endpoint" {
+# us1|us2|us3|us4|eu1|au1|custom
+# https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/
+variable "sysdigRegion" {
   type    = string
-  default = "collector-static.sysdigcloud.com"
-}
-
-# Sysdig NodeAnalyzer endpoint url
-variable "sysdig_nodeanalyzer_api_endpoint" {
-  type    = string
-  default = "secure.sysdig.com"
+  default = "us2"
 }
