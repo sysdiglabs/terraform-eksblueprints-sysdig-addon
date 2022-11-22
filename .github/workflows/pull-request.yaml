@@ -72,7 +72,7 @@ jobs:
         run: |
           pip install pre-commit
           go install github.com/hashicorp/terraform-config-inspect@latest
-      - name: Execute generate-terraform-providers for organizational
+      - name: Execute generate-terraform-provider
         if: ${{ matrix.directory !=  '.' }}
         run: |
           pre-commit run generate_tf_providers -a
