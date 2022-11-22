@@ -11,7 +11,6 @@ variable "manage_via_gitops" {
 }
 
 # tflint-ignore: terraform_unused_declarations
-# EKS cluster name
 variable "cluster_name" {
   description = "Cluster name"
   type        = string
