@@ -12,9 +12,9 @@ do
   echo validating [$dir]
   # skip aliased providers due to terraform validate unresolved bug
   # https://github.com/hashicorp/terraform/issues/28490
-  if [ "$dir" == "examples/organizational" ]; then
-    echo "skipping validation on [$dir]"
-    break
+  #if [ "$dir" == "examples/organizational" ]; then
+  #  echo "skipping validation on [$dir]"
+  #  break
   fi
   pushd .
   cd "$dir"
