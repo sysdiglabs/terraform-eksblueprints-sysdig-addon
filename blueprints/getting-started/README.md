@@ -148,3 +148,30 @@ module "eks_blueprints_kubernetes_addons" {
 To find out all the parameters accepted by the sysdig_agent EKS Terraform plugin please check the official (sysdig-deploy helm chart documentation)[https://charts.sysdig.com/charts/sysdig-deploy/].
 
 
+
+<!-- BEGIN_TF_DOCS -->
+### Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| aws_region | AWS target region | `string` | `"us-east-1"` | no |
+| cluster_name | Cluster name | `string` | `""` | no |
+| sysdig_accesskey | Sysdig Access Key | `string` | `""` | no |
+| sysdig_region | us1\|us2\|us3\|us4\|eu1\|au1\|custom https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/ | `string` | `"us2"` | no |
+
+### Outputs
+
+| Name | Description |
+|------|-------------|
+| configure_kubectl | Configure kubectl: make sure you're logged in with the correct AWS profile and run the following command to update your kubeconfig |
+| eks_cluster_id | EKS cluster ID |
+| eks_managed_nodegroup_arns | EKS managed node group arns |
+| eks_managed_nodegroup_ids | EKS managed node group ids |
+| eks_managed_nodegroup_role_name | EKS managed node group role name |
+| eks_managed_nodegroup_status | EKS managed node group status |
+| eks_managed_nodegroups | EKS managed node groups |
+| region | AWS region |
+| vpc_cidr | VPC CIDR |
+| vpc_private_subnet_cidr | VPC private subnet CIDR |
+| vpc_public_subnet_cidr | VPC public subnet CIDR |
+<!-- END_TF_DOCS -->
