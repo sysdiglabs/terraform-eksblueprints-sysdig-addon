@@ -7,7 +7,7 @@ variable "helm_config" {
 variable "cluster_name" {
   type        = string
   description = "Cluster Name"
-  default     = ""
+  default     = "testcluster"
 }
 
 variable "manage_via_gitops" {
