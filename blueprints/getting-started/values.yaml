@@ -1,16 +1,19 @@
 global:
   sysdig:
     accessKey: ${sysdigAccessKey}                  # Sysdig Agent Access Key
+    region: ${sysdigRegion}
+  kspm:
+    deploy: true
   clusterConfig:
     name: ${sysdigClusterName}
 agent:
   sysdig:
     settings:
-      collector: ${sysdigCollectorEndpoint}       # collector-static.sysdigcloud.com for sysdig us1
       collector_port: 6443
 nodeAnalyzer:
   nodeAnalyzer:
-    apiEndpoint: ${sysdigNodeAnalyzer} # secure.sysdig.com for sysdig us1
+    benchmarkRunner:
+      deploy: false
   secure:
     vulnerabilityManagement:
       newEngineOnly: true
