@@ -5,6 +5,7 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
+# tflint-ignore: terraform_unused_declarations
 # EKS cluster name
 variable "cluster_name" {
   description = "Cluster name"

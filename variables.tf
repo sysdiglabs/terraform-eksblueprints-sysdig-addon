@@ -4,16 +4,18 @@ variable "helm_config" {
   default     = {}
 }
 
-variable "cluster_name" {
-  type        = string
-  description = "Cluster Name"
-  default     = "testcluster"
-}
-
 variable "manage_via_gitops" {
   description = "Determines if the add-on should be managed via GitOps"
   type        = bool
   default     = false
+}
+
+# tflint-ignore: terraform_unused_declarations
+# EKS cluster name
+variable "cluster_name" {
+  description = "Cluster name"
+  type        = string
+  default     = ""
 }
 
 variable "addon_context" {
