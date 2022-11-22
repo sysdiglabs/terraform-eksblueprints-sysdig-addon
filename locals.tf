@@ -1,4 +1,6 @@
 resource "random_string" "id" {
+  version = "3.4.3"
+
   length  = 4
   special = false
   upper   = false
