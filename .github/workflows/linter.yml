@@ -4,6 +4,7 @@ name: "Code Quality: Linter"
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   linter:
