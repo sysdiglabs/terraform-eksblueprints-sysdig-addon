@@ -73,7 +73,7 @@ The [Getting Started Blueprint](/blueprints/getting-started/) illustrates the ba
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | addon_context | Input configuration for the addon | <pre>object({<br>    aws_caller_identity_account_id = string<br>    aws_caller_identity_arn        = string<br>    aws_eks_cluster_endpoint       = string<br>    aws_partition_id               = string<br>    aws_region_name                = string<br>    eks_cluster_id                 = string<br>    eks_oidc_issuer_url            = string<br>    eks_oidc_provider_arn          = string<br>    tags                           = map(string)<br>  })</pre> | n/a | yes |
-| cluster_name | Cluster Name | `string` | `""` | no |
+| cluster_name | Cluster Name | `string` | `"testcluster"` | no |
 | helm_config | Helm Configuration for Sysdig Agent | `any` | `{}` | no |
 | manage_via_gitops | Determines if the add-on should be managed via GitOps | `bool` | `false` | no |
 
