@@ -47,7 +47,7 @@ You can choose between to ways to pass the parameters:
     (You can optionally indicate a cluster name and AWS region).
     ```
     export TF_VAR_sysdig_accesskey=fa3efa3e-1234-1234-1234-fa3efa3e8120a
-    export TF_VAR_sysdig_regiont=us-east-1
+    export TF_VAR_sysdig_regiont=us1
     export TF_VAR_cluster_name="my-aws-cluster-sysdig"
     export TF_VAR_aws_region="sa-east-1"
     ```

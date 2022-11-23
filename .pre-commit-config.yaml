@@ -1,27 +1,4 @@
-#
-# requirements
-# - install pre-commit (latest)
-# - install terraform-docs (latest)
-# - see .github/workflows/ci-pull-request.yaml for more info on what's being valiated on CI
-# $ pre-commit run --color=always --show-diff-on-failure --all-files
-#
-
-
 repos:
-  # create a custom terraform validate for the examples, as launching the validation in the root dir won't work and give
-  # "Error: Provider configuration not present" error
-  # https://github.com/hashicorp/terraform/issues/21416
-  # https://discuss.hashicorp.com/t/how-to-run-terraform-validate-on-a-module-that-is-supplied-the-providers-via-an-alias/34664/2
-#  - repo: local
-#    hooks:
-#        - id: terraform_validate
-#          name: Terraform validate
-#          entry: resources/scripts/terraform_validate.sh
-#          pass_filenames: false
-#          language: script
-#          verbose: true
-
-  # https://github.com/antonbabenko/pre-commit-terraform/blob/master/README.md#terraform_validate (point 4)
   - repo: local
     hooks:
       - id: terraform_clean
