@@ -15,14 +15,16 @@ variable "cluster_name" {
 
 # Sysdig Access Key
 variable "sysdig_accesskey" {
-  type      = string
-  default   = ""
-  sensitive = true
+  description = "Sysdig agent access Key (Integrations > Agent Installation > Your access key )"
+  type        = string
+  default     = ""
+  sensitive   = true
 }
 
 # us1|us2|us3|us4|eu1|au1|custom
 # https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/
 variable "sysdig_region" {
-  type    = string
-  default = "us2"
+  description = "Sysdig SaaS region (us1|us2|us3|us4|eu1|au1|custom)"
+  type        = string
+  default     = "us2"
 }

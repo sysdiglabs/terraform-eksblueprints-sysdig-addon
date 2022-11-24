@@ -1,9 +1,11 @@
+#Helm config
 variable "helm_config" {
   type        = any
   description = "Helm Configuration for Sysdig Agent"
   default     = {}
 }
 
+# Manage via gitops
 variable "manage_via_gitops" {
   description = "Determines if the add-on should be managed via GitOps"
   type        = bool
