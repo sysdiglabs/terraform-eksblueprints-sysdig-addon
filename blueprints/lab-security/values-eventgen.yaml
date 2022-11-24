@@ -2,5 +2,5 @@
 config:
   loop: true
   actions: ""
-  command: test
+  command: ${falcoeventsCommand}
   sleep: "10s"
