@@ -3,14 +3,14 @@ provider "aws" {
 }
 
 resource "random_string" "random_suffix" {
-  version="3.4.3"
+  version = "3.4.3"
   length  = 4
   special = false
   upper   = false
 }
 
 locals {
-  name = coalesce(var.cluster_name, "${basename(path.cwd)}-${random_string.random_suffix.result}")
+  name         = coalesce(var.cluster_name, "${basename(path.cwd)}-${random_string.random_suffix.result}")
   cluster_name = local.name
   region       = var.aws_region
 
@@ -89,7 +89,7 @@ module "vpc" {
 
 module "eks_blueprints" {
   version = "v4.17.0"
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints"
+  source  = "github.com/aws-ia/terraform-aws-eks-blueprints"
 
   cluster_name    = local.cluster_name
   cluster_version = "1.23"
@@ -153,9 +153,9 @@ module "eks_blueprints_kubernetes_addons" {
     namespace = "sysdig-agent"
 
     values = [templatefile("${path.module}/values.yaml", {
-      sysdigAccessKey         = sensitive(var.sysdig_accesskey)
-      sysdigRegion            = var.sysdig_region
-      sysdigClusterName       = local.cluster_name
+      sysdigAccessKey   = sensitive(var.sysdig_accesskey)
+      sysdigRegion      = var.sysdig_region
+      sysdigClusterName = local.cluster_name
     })]
   }
 
