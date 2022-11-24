@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This Security Lab Blueprint deploys an AWS EKS cluster with the [Sysdig Addon](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest) together with test workloads ([Falco Event Generator](https://github.com/falcosecurity/event-generator)) generating suspicious events that are detected automatically by Sysdig. It makes easy to learn and play around with Sysdig, detect suspicious events and experiment with rules.
+This Security Lab Blueprint deploys an AWS EKS cluster with the [Sysdig Addon](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest)together with test workloads like [Falco Event Generator](https://github.com/falcosecurity/event-generator) and [Juice-Shop](https://owasp.org/www-project-juice-shop/) generating suspicious events and vulnerabilities that are detected automatically by Sysdig. It makes easy to learn and play around with Sysdig, detect suspicious events and experiment with rules.
 
 <img src="../../resources/sysdig_falco-event-generator.png" width="800" alt="Sysdig Secure UI showing Falco-Generator imitating a threatening workload">
 
