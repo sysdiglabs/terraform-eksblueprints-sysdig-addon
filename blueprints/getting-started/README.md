@@ -2,10 +2,10 @@
 
 ## Introduction
 
-[Sysdig](https://sysdig.com) is a security and monitor platform built for you to confidently run cloud and containers. 
+[Sysdig](https://sysdig.com) is a security and monitor platform built for you to confidently run cloud and containers.
 This Getting Started Blueprint allows to deploy AWS EKS clusters with a built in [Sysdig Addon](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest) from the day zero. It also makes it easy to customize and extend the blueprint following a gitops approach to adapt it to your needs regarding to [security](https://sysdig.com/products/secure/), [monitoring](https://sysdig.com/products/monitor/) or both secure and monitor with [Sysdig Platform Architecture](https://sysdig.com/platform-architecture/).
 
-This blueprint will generate the following components: 
+This blueprint will generate the following components:
 
 * 1x VPC with private and public subnets
 * 1x EKS Cluster
@@ -31,10 +31,10 @@ This blueprint will generate the following components:
     ````
 
 2. Initialize by providing the proper credentials and region from your Sysdig SaaS account.
-https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges   
+https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges
 You can choose between to ways to pass the parameters:
 
-    **a. Initialize values using terraform.tfvars**  
+    **a. Initialize values using terraform.tfvars**
     Rename the *terraform.tfvars.backup* file to *terraform.tfvars* and populate the values.
     ```
     sysdig_accesskey="fa3efa3e-1234-1234-1234-fa3efa3e8120a"
@@ -43,7 +43,7 @@ You can choose between to ways to pass the parameters:
     cluster_name="DevClusterB"
     aws_region="us-west-1"
     ```
-    **b. Initialize using system variables (TF_VARS)**  
+    **b. Initialize using system variables (TF_VARS)**
     (You can optionally indicate a cluster name and AWS region).
     ```
     export TF_VAR_sysdig_accesskey=fa3efa3e-1234-1234-1234-fa3efa3e8120a
@@ -101,7 +101,7 @@ module "eks_blueprints" {
   }
 
   ...
-  
+
   tags = local.tags
 }
 ```

@@ -11,8 +11,8 @@ This project contains the [Sysdig](https://sysdig.com) Terraform add-on for [AWS
 
 With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day-zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/). This add-on and the blueprints extends the framework [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints).
 
-## Getting started 
- 
+## Getting started
+
 The [Getting Started Blueprint](/blueprints/getting-started/) illustrates the basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.
 
 ## Requirements
