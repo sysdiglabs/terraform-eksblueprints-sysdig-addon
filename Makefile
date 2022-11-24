@@ -15,14 +15,14 @@ clean:
 	find -name ".terraform" -type d | xargs rm -rf
 	find -name ".terraform.lock.hcl" -type f | xargs rm -f
 
-terraform-init: generate-terraform-providers
+terraform-init:
 	find -name "*.tf" | xargs dirname | uniq | xargs -I% -P0 sh -c 'cd %; terraform init --backend=false' 1>/dev/null
 
 lint: terraform-init
 	pre-commit run -a terraform_validate
 	pre-commit run -a terraform_tflint
 
-docs: clean generate-terraform-providers
+docs: clean
 	pre-commit run -a terraform_docs
 
 fmt:
