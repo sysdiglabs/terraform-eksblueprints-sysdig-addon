@@ -186,6 +186,6 @@ resource "helm_release" "falco_eventgen" {
   }
 
   values = [templatefile("${path.module}/values-eventgen.yaml", {
-      falcoeventsCommand   = "test"
-    })]
+    falcoeventsCommand = "test"
+  })]
 }
