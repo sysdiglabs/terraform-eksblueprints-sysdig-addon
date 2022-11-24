@@ -22,6 +22,6 @@ locals {
     var.helm_config
   )
 
-  default_helm_values = [templatefile("${path.module}/values.yaml", {}, )]
+  default_helm_values = [templatefile("${path.module}/values-sysdig.yaml", {}, )]
 
 }
