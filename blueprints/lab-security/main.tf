@@ -193,7 +193,7 @@ resource "helm_release" "falcoeventgen" {
 # Deploy Juice-Shop (vulnerable workload)
 resource "helm_release" "juiceshop" {
   chart      = "juice-shop"
-  name       = "secureCodeBox"
+  name       = "securecodebox"
   namespace  = var.workloads_namespace
   repository = "https://charts.securecodebox.io"
   version    = "3.15.1"

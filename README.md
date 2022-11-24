@@ -13,7 +13,7 @@ With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraf
 
 - **Getting Started Blueprint** The [Getting Started Blueprint](/blueprints/getting-started/) provisions a basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.  
 
-- **Security Laboratory Blueprint** The [Security Lab Blueprint](/blueprints/lab-security/) creates an cluster with an example application to generate suspisious events to be detected out of the box by the Sysdig probe that is also installed with this automation.  
+- **Security Laboratory Blueprint** The [Security Lab Blueprint](/blueprints/lab-security/) creates an cluster with an example application to generate suspicious runtime events and vulnerabilities to be detected out of the box by the Sysdig probe that is also installed with this automation.  
 
 ## Requirements
 
