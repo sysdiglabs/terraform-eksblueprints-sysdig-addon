@@ -168,7 +168,7 @@ resource "kubernetes_namespace" "workloadnamespace" {
 }
 
 # Deploy Falco Event Generator
-resource "helm_release" "falco_eventgen" {
+resource "helm_release" "falcoeventgen" {
   chart      = "event-generator"
   name       = "falcosecurity"
   namespace  = var.workloads_namespace
@@ -187,5 +187,18 @@ resource "helm_release" "falco_eventgen" {
 
   values = [templatefile("${path.module}/values-eventgen.yaml", {
     falcoeventsCommand = "test"
+  })]
+}
+
+# Deploy Juice-Shop (vulnerable workload)
+resource "helm_release" "juiceshop" {
+  chart      = "juice-shop"
+  name       = "securecodebox"
+  namespace  = var.workloads_namespace
+  repository = "https://charts.securecodebox.io"
+  version    = "3.15.1"
+
+  values = [templatefile("${path.module}/values-juiceshop.yaml", {
+    juiceshopPort = 3000
   })]
 }
