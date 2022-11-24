@@ -17,7 +17,7 @@ terraform {
     random = {
       source  = "hashicorp/random"
       version = ">= 3.4.0"
-    }    
+    }
   }
 
   # ##  Used for end-to-end testing on project; update to suit your needs
