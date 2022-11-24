@@ -1,10 +1,3 @@
-resource "random_string" "id" {
-
-  length  = 4
-  special = false
-  upper   = false
-}
-
 locals {
   name      = "sysdig"
   namespace = "sysdig"

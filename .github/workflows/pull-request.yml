@@ -1,17 +1,9 @@
 name: Pre-Commit
 
 on:
-
   workflow_dispatch:
-
-  #pull_request:
-
-  # only direct-push to master for small tasks such as markdown modifications and such
-  #push:
-  #  branches:
-  #    - master
-  #  paths:
-  #    - '**.tf'
+  pull_request:
+  push:
 
 env:
   GO_VERSION: "^1.17"
