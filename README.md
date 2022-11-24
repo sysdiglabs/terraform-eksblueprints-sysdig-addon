@@ -5,15 +5,15 @@
 ## Introduction
 [Sysdig](https://sysdig.com) is a security and monitoring platform that helps organizations to confidently drive cloud and containers by providing insight from source to run. [Sysdig](https://sysdig.com) is built on open standards like [Falco](https://falco.org/), [OPA](https://www.openpolicyagent.org/) and [Prometheus](https://prometheus.io/).
 
-This project contains the [Sysdig](https://sysdig.com) Terraform add-on for [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints) as well as the  [blueprint(s)](/blueprints/) ready to start creating clusters fast and easy.
+This project contains the [Sysdig](https://sysdig.com) Terraform add-on for [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints) as well as a set of prebuilt  [blueprint(s)](/blueprints/) ready to start creating clusters fast and easy.
 
 ## EKS add-ons and blueprints
 
 With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day-zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/). This add-on and the blueprints extends the framework [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints).
 
-## Getting started
+- **Getting Started Blueprint** The [Getting Started Blueprint](/blueprints/getting-started/) provisions a basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.  
 
-The [Getting Started Blueprint](/blueprints/getting-started/) illustrates the basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.
+- **Security Laboratory Blueprint** The [Security Lab Blueprint](/blueprints/lab-security/) creates an cluster with an example application to generate suspisious events to be detected out of the box by the Sysdig probe that is also installed with this automation.  
 
 ## Requirements
 

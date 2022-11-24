@@ -1,0 +1,6 @@
+# https://github.com/falcosecurity/charts/blob/master/event-generator/generated/helm-values.md
+config:
+  loop: true
+  actions: ""
+  command: test
+  sleep: "10s"

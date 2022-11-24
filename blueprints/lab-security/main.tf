@@ -159,3 +159,31 @@ module "eks_blueprints_kubernetes_addons" {
 
   tags = local.tags
 }
+
+# Creating namespace with the Kubernetes provider instead of reliying on auto-creation in the helm_release.
+resource "kubernetes_namespace" "monitoring" {
+  metadata {
+    name = var.namespace
+  }
+}
+
+# Deploy Falco Event Generator
+resource "helm_release" "falco_eventgen" {
+  chart      = "event-generator"
+  name       = "falcosecurity"
+  namespace  = var.namespace
+  repository = "https://falcosecurity.github.io/charts"
+  version    = "0.1.1"
+
+  set {
+    name  = "podSecurityPolicy.enabled"
+    value = false
+  }
+
+  set {
+    name  = "server.persistentVolume.enabled"
+    value = false
+  }
+
+  values = [templatefile("${path.module}/values-sysdig.yaml", {})]
+}
