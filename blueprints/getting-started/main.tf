@@ -3,7 +3,6 @@ provider "aws" {
 }
 
 resource "random_string" "random_suffix" {
-  version = "3.4.3"
   length  = 4
   special = false
   upper   = false
@@ -88,8 +87,7 @@ module "vpc" {
 #---------------------------------------------------------------
 
 module "eks_blueprints" {
-  version = "v4.17.0"
-  source  = "github.com/aws-ia/terraform-aws-eks-blueprints"
+  source = "github.com/aws-ia/terraform-aws-eks-blueprints"
 
   cluster_name    = local.cluster_name
   cluster_version = "1.23"
