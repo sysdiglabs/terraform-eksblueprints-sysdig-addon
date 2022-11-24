@@ -30,8 +30,8 @@ variable "sysdig_region" {
 }
 
 # Namespace for the test workloads
-variable "namespace" {
+variable "workloads_namespace" {
   description = "Namespace for the test workloads"
   type        = string
-  default     = ""
+  default     = "evil-apps"
 }

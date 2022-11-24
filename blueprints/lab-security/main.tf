@@ -161,9 +161,9 @@ module "eks_blueprints_kubernetes_addons" {
 }
 
 # Creating namespace with the Kubernetes provider instead of reliying on auto-creation in the helm_release.
-resource "kubernetes_namespace" "monitoring" {
+resource "kubernetes_namespace" "workloadnamespace" {
   metadata {
-    name = var.namespace
+    name = var.workloads_namespace
   }
 }
 
@@ -171,7 +171,7 @@ resource "kubernetes_namespace" "monitoring" {
 resource "helm_release" "falco_eventgen" {
   chart      = "event-generator"
   name       = "falcosecurity"
-  namespace  = var.namespace
+  namespace  = var.workloads_namespace
   repository = "https://falcosecurity.github.io/charts"
   version    = "0.1.1"
 
@@ -185,5 +185,7 @@ resource "helm_release" "falco_eventgen" {
     value = false
   }
 
-  values = [templatefile("${path.module}/values-sysdig.yaml", {})]
+  values = [templatefile("${path.module}/values-eventgen.yaml", {
+      falcoeventsCommand   = "test"
+    })]
 }
