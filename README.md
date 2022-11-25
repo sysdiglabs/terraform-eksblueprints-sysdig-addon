@@ -1,4 +1,4 @@
-# Sysdidg Addon for EKS Blueprints
+# Sysdig Addon for EKS Blueprints
 
 **_`This project is currently in BETA stage`_**
 
