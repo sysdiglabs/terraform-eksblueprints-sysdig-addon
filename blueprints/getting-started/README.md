@@ -30,7 +30,7 @@ The blueprint will generate the following components:
     ````
 
 2. Initialize by providing the proper credentials and region from your Sysdig SaaS account.
-https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges
+https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges (us1|us2|us3|us4|eu1|au1|custom)
 You can choose between to ways to pass the parameters:
 
     **a. Initialize values using terraform.tfvars**
