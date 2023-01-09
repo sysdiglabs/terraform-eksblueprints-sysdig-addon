@@ -8,4 +8,4 @@ Any change affecting the add-on (base path) must be propagated to the base frame
 IMPORTANT: Make sure that the right version of the add-on is referenced https://github.com/aws-ia/terraform-aws-eks-blueprints/edit/main/modules/kubernetes-addons/main.tf
 
 
-2. Generate a [new release](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon/releases) and sync the [Sysdig addon for EKS Terraform Module](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest)
+2. Generate a [new release](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon/releases) and sync the [Sysdig addon for EKS Terraform Module](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest)  (git push --delete origin 0.0.x to delete tag)
