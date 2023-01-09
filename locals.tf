@@ -8,7 +8,7 @@ locals {
     name             = local.name
     chart            = "sysdig-deploy"
     repository       = "https://charts.sysdig.com"
-    version          = "1.5.43"
+    version          = "1.5.46"
     namespace        = local.namespace
     create_namespace = true
     values           = local.default_helm_values
