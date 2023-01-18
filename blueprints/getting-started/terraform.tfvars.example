@@ -1,7 +1,0 @@
-#  terraform apply -var-file="terraform.tfvars"
-
-sysdig_accesskey=<access-key> 					    # Sysdig > Integrations > Agent Installation
-sysdig_region=<sysdig-region>		                # us1|us2|us3|us4|eu1|au1|custom - Check your corresponding endpoint from https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges
-
-cluster_name="aws-cluster-sysdig"				    # Set the name of the EKS cluster
-aws_region="us-east-1"						        # Define the AWS region where the cluster will be provisioned
