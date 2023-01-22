@@ -10,7 +10,7 @@ The blueprint will generate the following components:
 * 1x EKS Cluster
 * 1x Managed node group for EKS
 * Sysdig instrumentation as Daemonset via Helm on the cluster
-* Sysdig Monitor Alerts
+* Sysdig Monitor Alerts configured via Sysdig API into the Sysdig SaaS backend
 
 
 ## Prerequisites
