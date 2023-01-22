@@ -11,9 +11,12 @@ This project contains the [Sysdig](https://sysdig.com) Terraform add-on for [AWS
 
 With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon) you can provision EKS clusters tailored to your needs and secured from day-zero as they are deployed together with the [Sysdig agents](https://docs.sysdig.com/en/docs/installation/sysdig-agent/). This add-on and the blueprints extends the framework [AWS EKS Blueprints](https://github.com/aws-ia/terraform-aws-eks-blueprints).
 
-- **Getting Started Blueprint** The [Getting Started Blueprint](/blueprints/getting-started/) provisions a basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.  
+- **Getting Started** The [Getting Started Blueprint](/blueprints/getting-started/) provisions a basic cluster with the most common Sysdig instrumentation for both Secure and Monitor use cases.  
 
-- **Security Laboratory Blueprint** The [Security Lab Blueprint](/blueprints/lab-security/) creates an cluster with an example application to generate suspicious runtime events and vulnerabilities to be detected out of the box by the Sysdig probe that is also installed with this automation.  
+- **Security Laboratory** The [Security Lab Blueprint](/blueprints/lab-security/) creates a cluster with an example application to generate suspicious runtime events and vulnerabilities to be detected out of the box by the Sysdig probe that is also installed with this automation.  
+
+- **Monitor and Alerts** The [Security Lab Blueprint](/blueprints/monitor-alerts/) set up a cluster monitored by the sysdig agents and defines Notification Channels and Alerts as code.
+
 
 ## Requirements
 
