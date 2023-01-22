@@ -15,7 +15,7 @@ With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraf
 
 - **Security Laboratory** The [Security Lab Blueprint](/blueprints/lab-security/) creates a cluster with an example application to generate suspicious runtime events and vulnerabilities to be detected out of the box by the Sysdig probe that is also installed with this automation.  
 
-- **Monitor and Alerts** The [Security Lab Blueprint](/blueprints/monitor-alerts/) set up a cluster monitored by the sysdig agents and defines Notification Channels and Alerts as code.
+- **Monitor and Alerting** The [Security Lab Blueprint](/blueprints/monitor-alerts/) set up a cluster monitored by the sysdig agents and defines Notification Channels and Alerts as code.
 
 
 ## Requirements
