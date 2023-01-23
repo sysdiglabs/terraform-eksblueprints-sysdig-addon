@@ -30,7 +30,7 @@ With this [Sysdig Addon for EKS Blueprints](https://github.com/sysdiglabs/terraf
 
 * Sysdig AWS workshops: https://sysdig.awsworkshop.io
 
-## Terraform Documentation 
+## Terraform Documentation
 <!-- BEGIN_TF_DOCS -->
 ### Inputs
 
