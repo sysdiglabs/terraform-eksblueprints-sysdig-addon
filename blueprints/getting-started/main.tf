@@ -18,7 +18,7 @@ locals {
 
   tags = {
     Blueprint  = local.name
-    GithubRepo = "github.com/aws-ia/terraform-aws-eks-blueprints"
+    GithubRepo = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.21.0"
   }
 }
 
@@ -87,7 +87,7 @@ module "vpc" {
 #---------------------------------------------------------------
 
 module "eks_blueprints" {
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints"
+  source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.21.0"
 
   cluster_name    = local.cluster_name
   cluster_version = "1.23"
