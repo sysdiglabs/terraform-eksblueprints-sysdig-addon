@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This Mointor-Alerts Blueprint deploys an AWS EKS cluster with the [Sysdig Addon](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest) instrumentation as well as a set of alerts-as-code. The goal of this blueprint is to enable organizations to understand, adopt and develop their monitoring automations following the best practices. 
+This Mointor-Alerts Blueprint deploys an AWS EKS cluster with the [Sysdig Addon](https://registry.terraform.io/modules/sysdiglabs/sysdig-addon/eksblueprints/latest) instrumentation as well as a set of alerts-as-code. The goal of this blueprint is to enable organizations to understand, adopt and develop their monitoring automations following the best practices.
 
 The blueprint will generate the following components:
 
