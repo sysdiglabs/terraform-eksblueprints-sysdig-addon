@@ -5,7 +5,7 @@ provider "aws" {
 # Doc https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs
 provider "sysdig" {
   sysdig_monitor_api_token = var.sysdig_monitor_api_token
-  sysdig_monitor_url = var.sysdig_monitor_url
+  sysdig_monitor_url       = var.sysdig_monitor_url
 }
 
 resource "random_string" "random_suffix" {
@@ -170,42 +170,42 @@ module "eks_blueprints_kubernetes_addons" {
 # Documentation about notification channels resources
 # https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs
 resource "sysdig_monitor_notification_channel_pagerduty" "pagerduty1" {
-  enabled              = true
-  name                 = "Example - PagerDuty integration with Sysdig"
-  account              = "account"
-  service_key          = "XXXXXXXXXXXXX"
-  service_name         = "sysdig"
-  notify_when_ok       = true
-  notify_when_resolved = true
-  send_test_notification  = false
+  enabled                = true
+  name                   = "Example - PagerDuty integration with Sysdig"
+  account                = "account"
+  service_key            = "XXXXXXXXXXXXX"
+  service_name           = "sysdig"
+  notify_when_ok         = true
+  notify_when_resolved   = true
+  send_test_notification = false
 }
 
 # Set up a metric and conditions to trigger the alert
 resource "sysdig_monitor_alert_v2_metric" "sample" {
 
-  name = "high cpu used"
-  severity = "high"
-  metric = "sysdig_container_cpu_used_percent"
+  name              = "high cpu used"
+  severity          = "high"
+  metric            = "sysdig_container_cpu_used_percent"
   group_aggregation = "avg"
-  time_aggregation = "avg"
-  operator = ">"
-  threshold = 75
-  group_by = ["kube_pod_name"]
+  time_aggregation  = "avg"
+  operator          = ">"
+  threshold         = 75
+  group_by          = ["kube_pod_name"]
 
   scope {
-    label = "kube_cluster_name"
+    label    = "kube_cluster_name"
     operator = "in"
-    values = ["${local.cluster_name}"]
+    values   = ["${local.cluster_name}"]
   }
 
   scope {
-    label = "kube_deployment_name"
+    label    = "kube_deployment_name"
     operator = "equals"
-    values = ["my_deployment"]
+    values   = ["my_deployment"]
   }
 
   notification_channels {
-    id = sysdig_monitor_notification_channel_pagerduty.pagerduty1.id
+    id                     = sysdig_monitor_notification_channel_pagerduty.pagerduty1.id
     renotify_every_minutes = 60
   }
 

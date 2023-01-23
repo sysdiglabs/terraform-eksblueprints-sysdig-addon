@@ -24,16 +24,16 @@ variable "sysdig_accesskey" {
 # Sysdig Monitor Url
 variable "sysdig_monitor_url" {
   description = "Sysdig Monitor API url (https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges)"
-  type = string
-  default = ""
+  type        = string
+  default     = ""
 }
 
 # Sysdig Monitor API Token
 variable "sysdig_monitor_api_token" {
   description = "Sysdig Monitor backend API Token (Settings > User Profile > Sysdig Monitor API)"
-  type = string
-  default = ""
-  sensitive = true
+  type        = string
+  default     = ""
+  sensitive   = true
 }
 
 # us1|us2|us3|us4|eu1|au1|custom
