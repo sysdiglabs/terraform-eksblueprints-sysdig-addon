@@ -195,7 +195,7 @@ resource "sysdig_monitor_alert_v2_metric" "sample" {
   scope {
     label    = "kube_cluster_name"
     operator = "in"
-    values   = ["${local.cluster_name}"]
+    values   = [local.cluster_name]
   }
 
   scope {
