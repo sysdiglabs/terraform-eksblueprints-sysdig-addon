@@ -1,0 +1,141 @@
+[0m[1mrandom_string.random_suffix: Refreshing state... [id=9iqw][0m
+[0m[1mmodule.storage.aws_ebs_volume.stackrox: Refreshing state... [id=vol-0b03c2d7b27858513][0m
+[0m[1mdata.aws_availability_zones.available: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.module.kms.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.module.kms.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.eks_blueprints.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.module.kms.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.aws_partition.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-03e16e49baf125c9d][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_caller_identity.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.aws_partition.current: Read complete after 0s [id=aws][0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2764486067][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_iam_role.this[0]: Refreshing state... [id=sysdig-splunk-integration-cluster2-cluster-role][0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_caller_identity.current: Read complete after 1s [id=625349975837][0m
+[0m[1mmodule.eks_blueprints.data.aws_caller_identity.current: Read complete after 1s [id=625349975837][0m
+[0m[1mmodule.eks_blueprints.data.aws_iam_session_context.current: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.data.aws_iam_session_context.current: Read complete after 0s [id=arn:aws:iam::625349975837:user/srv_sie][0m
+[0m[1mmodule.eks_blueprints.data.aws_iam_policy_document.eks_key: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.aws_caller_identity.current: Read complete after 1s [id=625349975837][0m
+[0m[1mmodule.eks_blueprints.data.aws_iam_policy_document.eks_key: Read complete after 0s [id=3336119409][0m
+[0m[1mmodule.eks_blueprints.module.kms[0].aws_kms_key.this: Refreshing state... [id=415a03b4-0825-450c-8c04-1dc3b2fe1cc9][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.module.kms.data.aws_caller_identity.current: Read complete after 1s [id=625349975837][0m
+[0m[1mdata.aws_availability_zones.available: Read complete after 1s [id=us-east-1][0m
+[0m[1mmodule.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0daa9c386261a4aa9][0m
+[0m[1mmodule.eks_blueprints.module.kms[0].aws_kms_alias.this: Refreshing state... [id=alias/sysdig-splunk-integration-cluster2][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"]: Refreshing state... [id=sysdig-splunk-integration-cluster2-cluster-role-20221215212255194900000001][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"]: Refreshing state... [id=sysdig-splunk-integration-cluster2-cluster-role-20221215212255301700000002][0m
+[0m[1mmodule.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-0c3fe61c3147924a3][0m
+[0m[1mmodule.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-066afb3615175acd8][0m
+[0m[1mmodule.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-02e0baaf035e3b7e9][0m
+[0m[1mmodule.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0cf566e69391770ea][0m
+[0m[1mmodule.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0e0ba7df1a76614e1][0m
+[0m[1mmodule.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-08153484af4a6e201][0m
+[0m[1mmodule.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0bd580b4d5263423f][0m
+[0m[1mmodule.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0bfb6a3ced0e8cd2d][0m
+[0m[1mmodule.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-092566786f439c011][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group.node[0]: Refreshing state... [id=sg-002adb14c030dfe04][0m
+[0m[1mmodule.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-0a8fa9b6c65f86eb9][0m
+[0m[1mmodule.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-00770bd74c731c55e][0m
+[0m[1mmodule.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0e94496221082bbc5][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-0bbe7987a1ff2a3e9][0m
+[0m[1mmodule.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-092566786f439c0111080289494][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-00ca0eb183c03b8d5][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-01d4186aa485e3dba][0m
+[0m[1mmodule.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0d8d7ae58cd6b4a80][0m
+[0m[1mmodule.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0626b9da66d4dff94][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["egress_self_coredns_tcp"]: Refreshing state... [id=sgrule-24972099][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-3906359647][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-561209150][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["egress_https"]: Refreshing state... [id=sgrule-585500599][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["egress_self_coredns_udp"]: Refreshing state... [id=sgrule-2400880933][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-2604558861][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["egress_ntp_udp"]: Refreshing state... [id=sgrule-2208702372][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-1284108976][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["egress_ntp_tcp"]: Refreshing state... [id=sgrule-4248320681][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.node["egress_cluster_443"]: Refreshing state... [id=sgrule-3628122226][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.cluster["egress_nodes_443"]: Refreshing state... [id=sgrule-2723307572][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.cluster["egress_nodes_kubelet"]: Refreshing state... [id=sgrule-2103716387][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-638884523][0m
+[0m[1mmodule.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-02e0baaf035e3b7e91080289494][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0a3696ce027b7777a][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0101c572e3428e52c][0m
+[0m[1mmodule.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-0634fbee14e05e976][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_eks_cluster.this[0]: Refreshing state... [id=sysdig-splunk-integration-cluster2][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_ec2_tag.cluster_primary_security_group["Blueprint"]: Refreshing state... [id=sg-0e07c765e6bf47da9,Blueprint][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_ec2_tag.cluster_primary_security_group["GithubRepo"]: Refreshing state... [id=sg-0e07c765e6bf47da9,GithubRepo][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.tls_certificate.this[0]: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.data.aws_eks_cluster.cluster[0]: Reading...[0m[0m
+[0m[1mdata.aws_eks_cluster_auth.this: Reading...[0m[0m
+[0m[1mdata.aws_eks_cluster_auth.this: Read complete after 0s [id=sysdig-splunk-integration-cluster2][0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.time_sleep.dataplane: Refreshing state... [id=2022-12-15T21:31:48Z][0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_eks_cluster.eks_cluster: Reading...[0m[0m
+[0m[1mkubernetes_persistent_volume.stackrox: Refreshing state... [id=stackrox-db][0m
+[0m[1mmodule.eks_blueprints.data.aws_eks_cluster.cluster[0]: Read complete after 1s [id=sysdig-splunk-integration-cluster2][0m
+[0m[1mmodule.eks_blueprints.data.http.eks_cluster_readiness[0]: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.data.tls_certificate.this[0]: Read complete after 1s [id=29dc9b1fd282516f6dd8d02143f33bbea24134e2][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::625349975837:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/453AF52A37E2232B800D31AA44712A3A][0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.data.aws_eks_cluster.eks_cluster: Read complete after 0s [id=sysdig-splunk-integration-cluster2][0m
+[0m[1mmodule.eks_blueprints_kubernetes_addons.module.sysdig_agent[0].module.helm_addon.helm_release.addon[0]: Refreshing state... [id=sysdig][0m
+[0m[1mmodule.eks_blueprints.data.http.eks_cluster_readiness[0]: Read complete after 0s [id=https://453AF52A37E2232B800D31AA44712A3A.gr7.us-east-1.eks.amazonaws.com/healthz][0m
+[0m[1mmodule.eks_blueprints.kubernetes_config_map.aws_auth[0]: Refreshing state... [id=kube-system/aws-auth][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].data.aws_iam_policy_document.managed_ng_assume_role_policy: Reading...[0m[0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].data.aws_iam_policy_document.managed_ng_assume_role_policy: Read complete after 0s [id=3778018924][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].aws_iam_role.managed_ng[0]: Refreshing state... [id=sysdig-splunk-integration-cluster2-managed-ondemand][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].aws_iam_role_policy_attachment.managed_ng["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=sysdig-splunk-integration-cluster2-managed-ondemand-20221215213140656800000008][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].aws_iam_role_policy_attachment.managed_ng["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]: Refreshing state... [id=sysdig-splunk-integration-cluster2-managed-ondemand-20221215213140674900000009][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].aws_iam_role_policy_attachment.managed_ng["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=sysdig-splunk-integration-cluster2-managed-ondemand-20221215213140624300000007][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].aws_iam_role_policy_attachment.managed_ng["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=sysdig-splunk-integration-cluster2-managed-ondemand-20221215213140514500000006][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].aws_iam_instance_profile.managed_ng[0]: Refreshing state... [id=sysdig-splunk-integration-cluster2-managed-ondemand][0m
+[0m[1mmodule.eks_blueprints.module.aws_eks_managed_node_groups["mg_5"].aws_eks_node_group.managed_ng: Refreshing state... [id=sysdig-splunk-integration-cluster2:managed-ondemand-20230118163608933500000001][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # kubernetes_persistent_volume_claim.stackrox[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "kubernetes_persistent_volume_claim" "stackrox" {
+      [32m+[0m [0m[1m[0mid[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mwait_until_bound[0m[0m = true
+
+      [32m+[0m [0mmetadata {
+          [32m+[0m [0m[1m[0mgeneration[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mname[0m[0m             = "stackrox-db"
+          [32m+[0m [0m[1m[0mnamespace[0m[0m        = "stackrox"
+          [32m+[0m [0m[1m[0mresource_version[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0muid[0m[0m              = (known after apply)
+        }
+
+      [32m+[0m [0mspec {
+          [32m+[0m [0m[1m[0maccess_modes[0m[0m       = [
+              [32m+[0m [0m"ReadWriteMany",
+            ]
+          [32m+[0m [0m[1m[0mstorage_class_name[0m[0m = "gp2"
+          [32m+[0m [0m[1m[0mvolume_name[0m[0m        = "stackrox-db"
+
+          [32m+[0m [0mresources {
+              [32m+[0m [0m[1m[0mrequests[0m[0m = {
+                  [32m+[0m [0m"storage" = "50Gi"
+                }
+            }
+        }
+    }
+
+[0m[1mPlan:[0m 1 to add, 0 to change, 0 to destroy.
+[0m[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

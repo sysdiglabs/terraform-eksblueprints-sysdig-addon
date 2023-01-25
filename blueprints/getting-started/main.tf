@@ -99,9 +99,9 @@ module "eks_blueprints" {
     mg_5 = {
       node_group_name = "managed-ondemand"
 
-      instance_types = ["m5.large"]
+      instance_types = ["m5.2xlarge"]
       capacity_type  = "ON_DEMAND"
-      disk_size      = 50
+      disk_size      = 150
 
       desired_size    = 3
       max_size        = 3
@@ -159,3 +159,137 @@ module "eks_blueprints_kubernetes_addons" {
 
   tags = local.tags
 }
+
+
+# resource "aws_ebs_volume" "stackrox" {
+#   availability_zone = format("%s%s", var.aws_region, "a")
+#   size              = 50
+
+#   tags = {
+#     Name = "StackRox"
+#   }
+# }
+
+# resource "aws_ebs_volume" "stackrox" {
+#   availability_zone = data.aws_availability_zones.available.names[0]
+#   size              = 50
+#   type              = "gp2"
+#   tags = {
+#     Name = "stackrox-db"
+#   }
+# }
+module "storage" {
+  source = "./storage"
+}
+
+resource "kubernetes_namespace" "stackrox_ns" {
+  metadata {
+    name = "stackrox"
+  }
+}
+resource "aws_security_group" "stackrox_efs_sg" {
+  name        = "stackrox_ef_sg"
+  description = "StackRox EFS Security Group"
+  vpc_id      = module.vpc.vpc_id
+
+
+}
+
+
+resource "aws_efs_mount_target" "stackrox_efs_mt" {
+  count          = length(module.vpc.private_subnets)
+  file_system_id = module.storage.efs_id
+  subnet_id      = module.vpc.private_subnets[count.index]
+  # VPC Default Security Group
+  security_groups = [module.vpc.default_security_group_id]
+
+}
+
+
+resource "kubernetes_persistent_volume" "stackrox_pv" {
+  metadata {
+    name = "stackrox-pv"
+  }
+  spec {
+    capacity = {
+      storage = "100Gi"
+    }
+    storage_class_name = "gp2"
+    access_modes       = ["ReadWriteOnce"]
+    persistent_volume_source {
+      csi {
+        driver        = "efs.csi.aws.com"
+        volume_handle = module.storage.efs_id
+      }
+    }
+    # persistent_volume_source {
+
+    #   aws_elastic_block_store {
+    #     volume_id = module.storage.aws_ebs_volume_id
+    #   }
+    persistent_volume_reclaim_policy = "Delete"
+  }
+}
+
+# resource "kubernetes_persistent_volume" "stackrox" {
+#   metadata {
+#     name = "stackrox-db"
+#   }
+#   spec {
+#     capacity = {
+#       storage = "50Gi"
+#     }
+#     access_modes = ["ReadWriteMany"]
+#     persistent_volume_source {
+#       aws_elastic_block_store {
+#         volume_id = aws_ebs_volume.stackrox.id
+#         fs_type   = "ext4"
+#       }
+#     }
+#     persistent_volume_reclaim_policy = "Retain"
+#   }
+# }
+
+# resource "kubernetes_persistent_volume_claim" "stackrox_pvc" {
+#   # wait_until_bound = false
+#   metadata {
+#     name      = "stackrox-db"
+#     namespace = "stackrox"
+#   }
+#   spec {
+#     access_modes = ["ReadWriteMany"]
+#     resources {
+#       requests = {
+#         storage = "50Gi"
+#       }
+#     }
+#     volume_name        = kubernetes_persistent_volume.stackrox_pv.metadata.0.name
+#     storage_class_name = "gp2"
+
+#   }
+# }
+
+# locals {
+#   central_services_values = templatefile("central-services.yaml", {})
+
+# }
+
+# locals {
+#   secured_cluster_values = templatefile("secured-cluster-services.yaml", {})
+# }
+
+# resource "helm_release" "stackrox_central_services" {
+#   name       = "stackrox-central-services"
+#   repository = "https://raw.githubusercontent.com/stackrox/helm-charts/main/opensource/"
+#   chart      = "stackrox-central-services"
+#   namespace  = "stackrox"
+#   values     = [local.central_services_values]
+# }
+
+# resource "helm_release" "stackrox_secured_cluster_services" {
+#   name       = "stackrox-secured-cluster-services"
+#   repository = "https://raw.githubusercontent.com/stackrox/helm-charts/main/opensource/"
+#   chart      = "stackrox-secured-cluster-services"
+#   namespace  = "stackrox"
+#   values     = [local.secured_cluster_values]
+# }

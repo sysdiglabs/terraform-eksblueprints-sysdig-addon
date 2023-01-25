@@ -1,0 +1,31 @@
+env:
+  offlineMode: true  # run in offline mode
+
+central:
+  # Use custom resource overrides for central
+  resources:
+    requests:
+      cpu: 4
+      memory: "8Gi"
+    limits:
+      cpu: 8
+      memory: "16Gi"
+
+  # Expose central via a LoadBalancer service
+  exposure:
+    loadBalancer:
+      enabled: true
+
+scanner:
+  # Run without StackRox Scanner (NOT RECOMMENDED)
+  disable: true
+
+customize:
+  # Apply the important-service=true label for all objects managed by this chart.
+  labels:
+    important-service: true
+  # Set the CLUSTER=important-cluster environment variable for all containers in the
+  # central deployment:
+  central:
+    envVars:
+      CLUSTER: sysdig-splunk-integration-cluster2
