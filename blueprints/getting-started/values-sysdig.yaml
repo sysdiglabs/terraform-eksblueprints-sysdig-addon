@@ -14,6 +14,9 @@ nodeAnalyzer:
   nodeAnalyzer:
     benchmarkRunner:
       deploy: false
+    runtimeScanner:
+      settings:
+        eveEnabled: true
   secure:
     vulnerabilityManagement:
       newEngineOnly: true
