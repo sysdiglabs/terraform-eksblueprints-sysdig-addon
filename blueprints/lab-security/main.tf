@@ -18,7 +18,7 @@ locals {
 
   tags = {
     Blueprint  = local.name
-    GithubRepo = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.21.0"
+    GithubRepo = "github.com/sysdiglabs/terraform-eksblueprints-sysdig-addon"
   }
 }
 
@@ -48,7 +48,7 @@ data "aws_availability_zones" "available" {}
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 3.0"
+  version = "~> 5.0"
 
   name = local.name
   cidr = local.vpc_cidr
@@ -87,7 +87,7 @@ module "vpc" {
 #---------------------------------------------------------------
 
 module "eks_blueprints" {
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.21.0"
+  source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.32.0"
 
   cluster_name    = local.cluster_name
   cluster_version = "1.23"
@@ -126,7 +126,7 @@ module "eks_blueprints" {
 }
 
 module "eks_blueprints_kubernetes_addons" {
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.21.0//modules/kubernetes-addons"
+  source = "github.com/aws-ia/terraform-aws-eks-blueprints//modules/kubernetes-addons?ref=v4.32.0"
 
   eks_cluster_id       = module.eks_blueprints.eks_cluster_id
   eks_cluster_endpoint = module.eks_blueprints.eks_cluster_endpoint
@@ -160,7 +160,7 @@ module "eks_blueprints_kubernetes_addons" {
   tags = local.tags
 }
 
-# Creating namespace with the Kubernetes provider instead of reliying on auto-creation in the helm_release.
+# Creating namespace with the Kubernetes providesr instead of reliying on auto-creation in the helm_release.
 resource "kubernetes_namespace" "workloadnamespace" {
   metadata {
     name = var.workloads_namespace
