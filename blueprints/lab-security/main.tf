@@ -99,7 +99,7 @@ module "eks_blueprints" {
     mg_5 = {
       node_group_name = "managed-ondemand"
 
-      instance_types = ["m5.xlarge"]
+      instance_types = ["m5.2xlarge"]
       capacity_type  = "ON_DEMAND"
       disk_size      = 50
 

@@ -6,10 +6,6 @@ global:
     deploy: true
   clusterConfig:
     name: ${sysdigClusterName}
-agent:
-  sysdig:
-    settings:
-      collector_port: 6443
 nodeAnalyzer:
   nodeAnalyzer:
     benchmarkRunner:
