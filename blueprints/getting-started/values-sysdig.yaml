@@ -17,4 +17,4 @@ nodeAnalyzer:
         eveEnabled: true
   secure:
     vulnerabilityManagement:
-      newEngineOnly: true
+      newEngineOnly: truegit

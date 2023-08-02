@@ -2,7 +2,7 @@ global:
   kspm:
     deploy: true
 ebpf:
-    enabled: true
+    enabled: false
 nodeAnalyzer:
   nodeAnalyzer:
     benchmarkRunner:
