@@ -1,10 +1,8 @@
 global:
   kspm:
     deploy: true
-agent:
-  sysdig:
-    settings:
-      collector_port: 6443
+ebpf:
+    enabled: false
 nodeAnalyzer:
   nodeAnalyzer:
     benchmarkRunner:
