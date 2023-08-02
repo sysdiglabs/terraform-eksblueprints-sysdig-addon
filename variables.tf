@@ -1,35 +1,59 @@
-#Helm config
-variable "helm_config" {
-  type        = any
-  description = "Helm Configuration for Sysdig Agent"
-  default     = {}
-}
-
-# Manage via gitops
-variable "manage_via_gitops" {
-  description = "Determines if the add-on should be managed via GitOps"
-  type        = bool
-  default     = false
-}
-
-# tflint-ignore: terraform_unused_declarations
-variable "cluster_name" {
-  description = "Cluster name"
+variable "chart_version" {
+  description = "The version of the Sysdig Helm Chart to deploy"
   type        = string
-  default     = ""
+  default     = "1.17.0"
 }
 
-variable "addon_context" {
-  description = "Input configuration for the addon"
-  type = object({
-    aws_caller_identity_account_id = string
-    aws_caller_identity_arn        = string
-    aws_eks_cluster_endpoint       = string
-    aws_partition_id               = string
-    aws_region_name                = string
-    eks_cluster_id                 = string
-    eks_oidc_issuer_url            = string
-    eks_oidc_provider_arn          = string
-    tags                           = map(string)
-  })
+variable "description" {
+  description = "The description of the Sysdig Helm Chart to deploy"
+  type        = string
+  default     = "Sysdig agent Helm chart"
+}
+
+variable "namespace" {
+  description = "The namespace to deploy the Sysdig Helm Chart into"
+  type        = string
+  default     = "sysdig"
+}
+
+variable "create_namespace" {
+  description = "Whether to create the namespace to deploy the Sysdig Helm Chart into"
+  type        = bool
+  default     = true
+}
+
+variable "values" {
+  description = "The values to pass to the Sysdig Helm Chart"
+  type        = list(string)
+  default = [
+    <<-EOT
+        global:
+          kspm:
+            deploy: true
+        ebpf:
+            enabled: false
+        nodeAnalyzer:
+          nodeAnalyzer:
+            benchmarkRunner:
+              deploy: false
+            runtimeScanner:
+              settings:
+                eveEnabled: true
+          secure:
+            vulnerabilityManagement:
+              newEngineOnly: true
+      EOT
+  ]
+}
+
+variable "set" {
+  description = "Value block with custom values to be merged with the values yaml"
+  type        = any
+  default     = []
+}
+
+variable "set_sensitive" {
+  description = "Value block with custom sensitive values to be merged with the values yaml that won't be exposed in the plan's diff"
+  type        = any
+  default     = []
 }

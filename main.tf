@@ -1,9 +1,32 @@
-# Helm addon
-module "helm_addon" {
-  #Change before publishing
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints//modules/kubernetes-addons/helm-addon?ref=v4.32.1"
+resource "helm_release" "this" {
+  name             = "sysdig"
+  chart            = "sysdig-deploy"
+  repository       = "https://charts.sysdig.com"
+  version          = var.chart_version
+  description      = var.description
+  namespace        = var.namespace
+  create_namespace = var.create_namespace
+  values           = var.values
 
-  addon_context = var.addon_context
-  set_values    = local.set_values
-  helm_config   = local.helm_config
+  dynamic "set" {
+    for_each = var.set
+
+    content {
+      name  = set.value.name
+      value = set.value.value
+      type  = try(set.value.type, null)
+    }
+  }
+
+  dynamic "set_sensitive" {
+    for_each = var.set_sensitive
+
+    content {
+      name  = set_sensitive.value.name
+      value = set_sensitive.value.value
+      type  = try(set_sensitive.value.type, null)
+    }
+  }
+
+  wait = false
 }
