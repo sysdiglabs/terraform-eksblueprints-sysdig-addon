@@ -30,7 +30,7 @@ The blueprint will generate the following components:
     ````
 
 2. Initialize by providing the proper credentials and region from your Sysdig SaaS account.
-https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges (us1|us2|us3|us4|eu1|au1|custom).  
+https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges (us1|us2|us3|us4|eu1|au1|custom).
 You can choose between to ways to pass the parameters:
 
     **a. Initialize values using terraform.tfvars**
@@ -72,47 +72,38 @@ You can choose between to ways to pass the parameters:
 ## Extend or change the EKS cluster
 Modify the following module from main.tf
 
-```
-module "eks_blueprints" {
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints"
+```hcl
+module "eks" {
+  source  = "terraform-aws-modules/eks/aws"
+  version = "~> 19.15"
 
-  cluster_name    = local.cluster_name
-  cluster_version = "1.23"
+  cluster_name    = local.name
+  cluster_version = "1.27"
 
-  vpc_id             = module.vpc.vpc_id
-  private_subnet_ids = module.vpc.private_subnets
+  vpc_id     = module.vpc.vpc_id
+  subnet_ids = module.vpc.private_subnets
 
-  managed_node_groups = {
-    mg_5 = {
-      node_group_name = "managed-ondemand"
+  eks_managed_node_groups = {
+    initial = {
+      instance_types = ["m5.xlarge"]
 
-      instance_types = ["m5.large"]
-      capacity_type  = "ON_DEMAND"
-      disk_size      = 50
-
-      desired_size    = 3
-      max_size        = 3
-      min_size        = 2
-      max_unavailable = 1
-
-      subnet_ids = module.vpc.private_subnets
+      min_size     = 1
+      max_size     = 2
+      desired_size = 1
     }
   }
-
-  ...
 
   tags = local.tags
 }
 ```
 
-
 ### Extend or change addons and Sysdig instrumentation
 
 Modify the following module from main.tf
 
-```
-module "eks_blueprints_kubernetes_addons" {
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints//modules/kubernetes-addons"
+```hcl
+module "sysdig_addon" {
+  source  = "sysdiglabs/sysdig-addon/eksblueprints"
 
   ...
 
@@ -139,31 +130,3 @@ To find out all the parameters accepted by the sysdig_agent EKS Terraform plugin
 ## About Sysdig
 
 [Sysdig](https://sysdig.com) Is a security and monitoring platform to secure your cloud and containers with no blindspots, no guesswork, no wasted time.
-
-
-<!-- BEGIN_TF_DOCS -->
-### Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| aws_region | AWS target region | `string` | `"us-east-1"` | no |
-| cluster_name | Cluster name | `string` | `""` | no |
-| sysdig_accesskey | Sysdig Access Key | `string` | `""` | no |
-| sysdig_region | us1\|us2\|us3\|us4\|eu1\|au1\|custom https://docs.sysdig.com/en/docs/administration/saas-regions-and-ip-ranges/ | `string` | `"us2"` | no |
-
-### Outputs
-
-| Name | Description |
-|------|-------------|
-| configure_kubectl | Configure kubectl: make sure you're logged in with the correct AWS profile and run the following command to update your kubeconfig |
-| eks_cluster_id | EKS cluster ID |
-| eks_managed_nodegroup_arns | EKS managed node group arns |
-| eks_managed_nodegroup_ids | EKS managed node group ids |
-| eks_managed_nodegroup_role_name | EKS managed node group role name |
-| eks_managed_nodegroup_status | EKS managed node group status |
-| eks_managed_nodegroups | EKS managed node groups |
-| region | AWS region |
-| vpc_cidr | VPC CIDR |
-| vpc_private_subnet_cidr | VPC private subnet CIDR |
-| vpc_public_subnet_cidr | VPC public subnet CIDR |
-<!-- END_TF_DOCS -->
